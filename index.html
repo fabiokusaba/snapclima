@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Snapclima</title>
+</head>
+
+<body>
+<!-- Cabeçalho - Header (mãe de todos esses elementos) -->
+    <header class="header">
+        <!-- Div - para agrupar o nosso input de busca e botão -->
+        <div class="header__city-search-bar">
+            <input 
+            class="header__input"
+            id="city-search-input"
+            type="text" 
+            placeholder="Temperatura de qual cidade?">
+
+            <button 
+            class="header__button" 
+            id="city-search-button">
+
+                <img class="header__button-icon" src="./assets/search-icon.svg" alt="Ícone de uma lupa.">
+
+            </button>
+        </div>
+        <!-- Div - Responsáveis por exibir as informações de data e localização -->
+        <div 
+            class="header__current-date" 
+            id="current-date">
+            ...
+        </div>
+
+        <div 
+            lass="header__city-name" 
+            id="city-name">
+            ...
+        </div>
+
+    </header>
+
+    <!-- Section -->
+    <section class="current-temperature">
+        <!-- Imagem do clima -->
+        <img class="current-temperature__weather-icon"
+        id="weather-icon"
+        src="./assets/loading-icon.svg" 
+        alt="Ícone que ilustra a temperatura atual." 
+        aria-hidden="true">
+        <!-- Div - Tempo e clima -->
+        <div 
+            id="weather-description"
+            class="current-temperature__description">
+            ...
+        </div>
+
+        <div class="current-temperature__info-label">Tempo agora</div>
+
+        <div
+            id="current-temperature"
+            class="current-temperature__current-temperature">
+            ...
+        </div>
+
+    </section>
+
+    <!-- Container - Plano de fundo branco -->
+    <div class="bottom-container">
+        <!-- Informações climáticas: vento, sensação, umidade -->
+        <section class="temperature-details">
+            <div class="temperature-details__item">
+                <div class="temperature-details__label">Vento</div>
+
+                <div 
+                    id="wind-speed"
+                    class="temperature-details__value">
+                    ...
+                </div>
+
+            </div>
+
+            <div class="temperature-details__item">
+                <div class="temperature-details__label">Sensação</div>
+
+                <div 
+                    id="feels-like-temperature"
+                    class="temperature-details__value">
+                    ...
+                </div>
+
+            </div>
+            <div class="temperature-details__item">
+                <div class="temperature-details__label">Umidade</div>
+
+                <div 
+                    id="current-humidity"
+                    class="temperature-details__value">
+                    ...
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Informações sobre o nascer do sol e pôr do sol -->
+        <section class="sunset-sunrise">
+            <div class="sunset-sunrise__item">
+                <img class="sunset-sunrise__icon" src="./assets/sunrise.svg" alt="Nascer do sol">
+
+                <div
+                    id="sunrise-time"
+                    class="sunset-sunrise__value">
+                    ...
+                </div>
+            </div>
+            <div class="sunset-sunrise__item">
+                <img class="sunset-sunrise__icon" src="./assets/sunset.svg" alt="Pôr do sol">
+
+                <div 
+                    id="sunset-time"
+                    class="sunset-sunrise__value">
+                    ...
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
